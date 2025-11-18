@@ -98,7 +98,7 @@ SELECT DISTINCT category FROM retail_sales
 -- Q.7 Write a SQL query to calculate the average sale for each month. Find out best selling month in each year
 -- Q.8 Write a SQL query to find the top 5 customers based on the highest total sales 
 -- Q.9 Write a SQL query to find the number of unique customers who purchased items from each category.
--- Q.10 Write a SQL query to create each shift and number of orders (Example Morning <=12, Afternoon Between 12 & 17, Evening >17)
+-- Q.10 Write a SQL query to create each shift and number of orders (Example Morning < 12, Afternoon Between 12 & 17, Evening >17)
 
 
 
@@ -191,7 +191,7 @@ FROM retail_sales
 GROUP BY category
 
 
--- Q.10 Write a SQL query to create each shift and number of orders (Example Morning <=12, Afternoon Between 12 & 17, Evening >17)?
+-- Q.10 Write a SQL query to create each shift and number of orders (Example Morning < 12, Afternoon Between 12 & 17, Evening >17)?
 WITH hourly_sale
 AS
 (
@@ -208,6 +208,7 @@ SELECT
 	COUNT(*) as total_orders
 FROM hourly_sale
 GROUP BY shift
+
 
 
 -->END OF project<--
